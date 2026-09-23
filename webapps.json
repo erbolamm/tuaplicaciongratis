@@ -1,47 +1,164 @@
 [
   {
+    "id": "megapromtista",
+    "title": "MegaPromtista",
+    "description": "Factoría de Agentes de IA, Ingeniería de Prompts y Ecosistema Abierto para explorar y crear con inteligencia artificial.",
+    "category": "Inteligencia artificial",
+    "tags": ["IA", "Prompts", "Agentes", "JavaScript"],
+    "liveUrl": "https://megapromtista.com/",
+    "repoUrl": "https://github.com/erbolamm/megapromtista"
+  },
+  {
     "id": "fabrica-agentes",
     "title": "Fábrica de Agentes",
-    "description": "Explora, personaliza y copia prompts y flujos de trabajo para crear tus propios agentes de IA.",
+    "description": "Explora, personaliza y copia prompts y flujos de trabajo para crear tus propios agentes de IA autónomos.",
     "category": "Inteligencia artificial",
-    "tags": ["HTML", "JavaScript", "Prompts"],
+    "tags": ["IA", "Prompts", "Automatización"],
     "liveUrl": "https://erbolamm.github.io/FabricaDeAgentesApliarte/",
     "repoUrl": "https://github.com/erbolamm/FabricaDeAgentesApliarte"
   },
   {
+    "id": "tts-apliarte",
+    "title": "TTS ApliArte",
+    "description": "Traducción y voz en tiempo real para directos de Twitch en Flutter. Código abierto y privacidad local.",
+    "category": "Multimedia y voz",
+    "tags": ["Flutter", "TTS", "Twitch", "Voz"],
+    "liveUrl": "https://erbolamm.github.io/tts-apliarte/landing.html",
+    "repoUrl": "https://github.com/erbolamm/tts-apliarte"
+  },
+  {
+    "id": "key-master",
+    "title": "Key Master (ApliArte Click Pro)",
+    "description": "Domina el teclado y olvida el ratón. Entrenador interactivo de atajos para VS Code, Cursor y Windsurf.",
+    "category": "Productividad",
+    "tags": ["Atajos", "Productividad", "VS Code", "Web"],
+    "liveUrl": "https://apliarte-click-pro-2026.web.app/",
+    "repoUrl": "https://github.com/erbolamm/key-master"
+  },
+  {
+    "id": "apliarte-ai",
+    "title": "ApliArte AI",
+    "description": "Chat de IA 100% local en tu navegador y VS Code con transformers.js. Sin APIs externas, sin cuentas ni coste.",
+    "category": "Inteligencia artificial",
+    "tags": ["IA Local", "Transformers.js", "Privacidad"],
+    "liveUrl": "https://erbolamm.github.io/apliarte-ai/",
+    "repoUrl": "https://github.com/erbolamm/apliarte-ai"
+  },
+  {
     "id": "widget-canvas",
     "title": "ApliArte Widget Canvas",
-    "description": "Diseña y anota interfaces Flutter sobre un lienzo visual; convierte tus cambios en prompts de implementación.",
+    "description": "Bocetea, anota y diseña sobre tu app Flutter real en un lienzo visual interactivo con Material 3 Expressive.",
     "category": "Diseño y desarrollo",
-    "tags": ["Flutter", "Dart", "Diseño UI"],
+    "tags": ["Flutter", "Dart", "Diseño UI", "Canvas"],
     "liveUrl": "https://erbolamm.github.io/apliarte-widget-canvas/",
     "repoUrl": "https://github.com/erbolamm/apliarte-widget-canvas"
   },
   {
     "id": "apliarte-faq",
     "title": "ApliArte FAQ",
-    "description": "Prueba un asistente de preguntas frecuentes que busca respuestas sin conexión ni servicios de IA.",
+    "description": "Asistente inteligente de preguntas frecuentes que busca respuestas en modo local sin conexión ni APIs de pago.",
     "category": "Productividad",
-    "tags": ["Flutter", "Dart", "Offline"],
+    "tags": ["Flutter", "Dart", "Offline", "Búsqueda"],
     "liveUrl": "https://erbolamm.github.io/apliarte_faq/",
     "repoUrl": "https://github.com/erbolamm/apliarte_faq"
   },
   {
     "id": "glass-theme",
     "title": "ApliArte Glass Theme",
-    "description": "Demo interactiva de componentes y efectos de cristal para interfaces creadas con Flutter.",
+    "description": "Catálogo interactivo de componentes y efectos visuales de cristal líquido (Glassmorphism) para Flutter.",
     "category": "Diseño y desarrollo",
-    "tags": ["Flutter", "Dart", "UI"],
+    "tags": ["Flutter", "Glassmorphism", "UI", "CSS/Dart"],
     "liveUrl": "https://erbolamm.github.io/apliarte-glass-theme/",
     "repoUrl": "https://github.com/erbolamm/apliarte-glass-theme"
   },
   {
-    "id": "megapromtista",
-    "title": "MegaPromtista",
-    "description": "Mapa interactivo de proyectos, prompts y agentes para explorar el ecosistema abierto de ApliArte.",
+    "id": "sketchybar-config",
+    "title": "SketchyBar Config",
+    "description": "Configurador visual para SketchyBar en macOS. Cambia colores, prueba plugins y explora temas desde la web.",
+    "category": "Personalización y sistema",
+    "tags": ["macOS", "SketchyBar", "Web App", "Diseño"],
+    "liveUrl": "https://erbolamm.github.io/SketchyBar-Config/",
+    "repoUrl": "https://github.com/erbolamm/SketchyBar-Config"
+  },
+  {
+    "id": "apli-kids-asis",
+    "title": "Apli Kids Asistente (Cleo)",
+    "description": "Asistente educativo infantil interactivo para aprendizaje guiado. Construido en Flutter con backend seguro.",
+    "category": "Educación y niños",
+    "tags": ["Educación", "Flutter", "Niños", "Asistente"],
+    "liveUrl": "https://erbolamm.github.io/apli-kids-asis/",
+    "repoUrl": "https://github.com/erbolamm/apli-kids-asis"
+  },
+  {
+    "id": "clawmobil",
+    "title": "ClawMobil",
+    "description": "Convierte cualquier móvil Android en un servidor de IA autónomo con Telegram Bot, OpenClaw e IA offline.",
     "category": "Inteligencia artificial",
-    "tags": ["HTML", "JavaScript", "Canvas"],
-    "liveUrl": "https://megapromtista.com/",
-    "repoUrl": "https://github.com/erbolamm/megapromtista"
+    "tags": ["Android", "OpenClaw", "Telegram", "Servidor"],
+    "liveUrl": "https://erbolamm.github.io/ClawMobil/",
+    "repoUrl": "https://github.com/erbolamm/ClawMobil"
+  },
+  {
+    "id": "zendash",
+    "title": "ApliArte ZenDash",
+    "description": "Panel de control web ligero, minimalista y eficiente para monitorización rápida y enlaces esenciales.",
+    "category": "Productividad",
+    "tags": ["Dashboard", "Minimalismo", "Web", "Productividad"],
+    "liveUrl": "https://erbolamm.github.io/ApliArteZenDash/",
+    "repoUrl": "https://github.com/erbolamm/ApliArteZenDash"
+  },
+  {
+    "id": "apliarte-click",
+    "title": "ApliArte Click",
+    "description": "Herramienta web ágil de interacción, clics rápidos y atajos directos para flujos de trabajo frecuentes.",
+    "category": "Productividad",
+    "tags": ["Productividad", "Herramientas", "Web"],
+    "liveUrl": "https://erbolamm.github.io/ApliArteClick/",
+    "repoUrl": "https://github.com/erbolamm/ApliArteClick"
+  },
+  {
+    "id": "aplibot-web",
+    "title": "ApliBot Web",
+    "description": "Consola web interactiva para bots y asistentes autónomos con chat en tiempo real y comandos directos.",
+    "category": "Inteligencia artificial",
+    "tags": ["Bots", "Chat", "Automatización", "Web"],
+    "liveUrl": "https://erbolamm.github.io/aplibot-web/",
+    "repoUrl": "https://github.com/erbolamm/aplibot-web"
+  },
+  {
+    "id": "flutter-connect",
+    "title": "ApliArte Flutter Connect",
+    "description": "Puente interactivo de comunicación y conectividad para aplicaciones y herramientas Flutter multiplataforma.",
+    "category": "Diseño y desarrollo",
+    "tags": ["Flutter", "Conectividad", "Web"],
+    "liveUrl": "https://erbolamm.github.io/apliarte-flutter-connect/",
+    "repoUrl": "https://github.com/erbolamm/apliarte-flutter-connect"
+  },
+  {
+    "id": "calca-config",
+    "title": "Calca Config",
+    "description": "Herramienta online para generar y afinar configuraciones de interfaz, paletas de color y estilos gráficos.",
+    "category": "Diseño y desarrollo",
+    "tags": ["Configuración", "Diseño", "Utilidades"],
+    "liveUrl": "https://erbolamm.github.io/calca-config/",
+    "repoUrl": "https://github.com/erbolamm/calca-config"
+  },
+  {
+    "id": "family-point",
+    "title": "Family Point Panel",
+    "description": "Panel interactivo de puntos, hábitos y metas para la organización familiar diaria.",
+    "category": "Productividad",
+    "tags": ["Familia", "Hábitos", "Gamificación", "Web"],
+    "liveUrl": "https://erbolamm.github.io/family-point-panel/",
+    "repoUrl": "https://github.com/erbolamm/family-point-panel"
+  },
+  {
+    "id": "erbolamm-studio",
+    "title": "ErBolamm Studio",
+    "description": "Estudio web de experimentación, prototipos rápidos y utilidades creativas del ecosistema ErBolamm.",
+    "category": "Diseño y desarrollo",
+    "tags": ["Studio", "Creatividad", "Prototipos", "Web"],
+    "liveUrl": "https://erbolamm.github.io/erbolamm-studio/",
+    "repoUrl": "https://github.com/erbolamm/erbolamm-studio"
   }
 ]
