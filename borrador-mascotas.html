@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Así se eligió la mascota oficial · TuAplicacionGratis.com</title>
+  <meta name="description" content="Mesa redonda de diseño de TuAplicacionGratis.com: las 4 propuestas animadas en SVG vectorial y la elección de Sparky como mascota oficial.">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 30px 20px 80px;
+      color: #1b2935;
+    }
+    .header-mesa {
+      max-width: 1200px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 25px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #c8d8e4;
+      color: #005fa9;
+      font-weight: 750;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,95,169,0.06);
+      transition: all .2s;
+    }
+    .back-btn:hover {
+      background: #005fa9;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .header-mesa h1 {
+      font-size: 34px;
+      margin: 12px 0 10px;
+      color: #005fa9;
+      letter-spacing: -0.03em;
+    }
+    .header-mesa p {
+      font-size: 16px;
+      color: #647487;
+      margin: 0 auto;
+      max-width: 760px;
+      line-height: 1.6;
+    }
+    .theme-bar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 24px;
+    }
+    .theme-btn {
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 1px solid #c8d8e4;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all .2s;
+    }
+    .theme-btn.active {
+      background: #005fa9;
+      color: #fff;
+      border-color: #005fa9;
+    }
+    .grid-propuestas {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @media(max-width: 850px) {
+      .grid-propuestas {
+        grid-template-columns: 1fr;
+      }
+    }
+    .card-propuesta {
+      background: #fff;
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(0, 95, 169, 0.08);
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .card-propuesta.ganadora {
+      border-color: #f59e0b;
+      box-shadow: 0 12px 35px rgba(245, 158, 11, 0.2);
+    }
+    .badge-ganadora {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+      text-transform: uppercase;
+    }
+    .propuesta-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .propuesta-num {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      background: #e6f5fc;
+      color: #005fa9;
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .propuesta-autor {
+      font-size: 13px;
+      font-weight: 700;
+      color: #647487;
+    }
+    .propuesta-title {
+      font-size: 21px;
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+    .propuesta-desc {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #647487;
+      margin: 0 0 18px;
+    }
+    .preview-box {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #dce8ee;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Keyframes para las mascotas */
+    @keyframes mascot-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes mascot-wave-left {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-18deg); }
+    }
+    @keyframes mascot-wave-right {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(18deg); }
+    }
+    @keyframes mascot-blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+    @keyframes mascot-sparkle {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+      50% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-nav">
+    <a href="index.html" class="back-btn">← Volver al catálogo</a>
+    <span style="font-weight: 700; font-size: 13px; color: #647487;">TuAplicacionGratis.com · Crónica de Diseño</span>
+  </div>
+
+  <div class="header-mesa">
+    <span class="propuesta-num">MESA REDONDA CREATIVA</span>
+    <h1>Así se eligió la mascota nueva</h1>
+    <p>Para dotar a <strong>TuAplicacionGratis.com</strong> de una identidad amigable y cercana, se convocó una mesa redonda de diseño entre los asistentes del ecosistema. Cada uno presentó una propuesta interactiva completa en SVG vectorial con animaciones CSS fluidas. Tras evaluarlas en vivo, Javier Mateo eligió la <strong>Opción 2 («Sparky»)</strong>.</p>
+    <div class="theme-bar">
+      <button class="theme-btn active" onclick="setPreviewTheme('light')">☀️ Tema Claro</button>
+      <button class="theme-btn" onclick="setPreviewTheme('dark')">🌙 Modo Oscuro</button>
+    </div>
+  </div>
+
+  <div class="grid-propuestas">
+
+    <!-- PROPUESTA 1: AGY (KAWAII & AMIGABLE) -->
+    <div class="card-propuesta">
+      <div class="propuesta-header">
+        <span class="propuesta-num">Opción 1</span>
+        <span class="propuesta-autor">Agy · Minimalista & Kawaii</span>
+      </div>
+      <h3 class="propuesta-title">«Appy» el Móvil Saludador</h3>
+      <p class="propuesta-desc">Smartphone azul redondeado con bracitos suaves, carita tierna con ojos brillantes parpadeantes, sonrisa acogedora y una mano saludando con una chispa mágica cian.</p>
+      <div class="preview-box">
+        <div class="hero-art" style="width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; position: relative;">
+          <div class="art-grid"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          
+          <!-- SVG PROPUESTA 1 -->
+          <div style="position: relative; z-index: 10; animation: mascot-float 3s ease-in-out infinite;">
+            <svg width="190" height="230" viewBox="0 0 190 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="95" cy="220" rx="42" ry="7" fill="rgba(0,95,169,0.18)"/>
+              
+              <!-- Brazo derecho (descanso) -->
+              <path d="M142 110 C165 118 165 145 142 142" stroke="#005fa9" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <circle cx="140" cy="142" r="7" fill="#5ecef5"/>
+
+              <!-- Brazo izquierdo (saludando) -->
+              <g style="transform-origin: 48px 105px; animation: mascot-wave-left 1.6s ease-in-out infinite;">
+                <path d="M48 105 C25 90 20 65 32 46" stroke="#005fa9" stroke-width="8" stroke-linecap="round" fill="none"/>
+                <circle cx="34" cy="42" r="9" fill="#5ecef5"/>
+                <!-- Chispa mágica -->
+                <path d="M34 26 L36 33 L43 35 L36 37 L34 44 L32 37 L25 35 L32 33 Z" fill="#5ecef5" style="transform-origin: 34px 35px; animation: mascot-sparkle 2s ease-in-out infinite;"/>
+              </g>
+
+              <!-- Cuerpo Smartphone -->
+              <rect x="52" y="30" width="86" height="155" rx="20" fill="#005fa9" stroke="#5ecef5" stroke-width="3"/>
+              <rect x="80" y="38" width="30" height="4" rx="2" fill="#5ecef5"/>
+              <circle cx="73" cy="40" r="2" fill="#5ecef5"/>
+              
+              <!-- Pantalla -->
+              <rect x="58" y="48" width="74" height="118" rx="13" fill="#ffffff"/>
+              
+              <!-- Carita Kawaii -->
+              <g style="transform-origin: 95px 95px; animation: mascot-blink 4s infinite;">
+                <ellipse cx="80" cy="85" rx="5" ry="7" fill="#005fa9"/>
+                <circle cx="82" cy="83" r="2.5" fill="#ffffff"/>
+                <ellipse cx="110" cy="85" rx="5" ry="7" fill="#005fa9"/>
+                <circle cx="112" cy="83" r="2.5" fill="#ffffff"/>
+              </g>
+              <circle cx="73" cy="95" r="4" fill="#5ecef5" opacity="0.6"/>
+              <circle cx="117" cy="95" r="4" fill="#5ecef5" opacity="0.6"/>
+              <path d="M88 98 Q95 106 102 98" stroke="#005fa9" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+              <rect x="66" y="125" width="58" height="20" rx="10" fill="#e0f4ff"/>
+              <text x="95" y="139" font-size="9" font-weight="900" fill="#005fa9" text-anchor="middle" letter-spacing="0.5">100% GRATIS</text>
+
+              <rect x="83" y="174" width="24" height="3" rx="1.5" fill="#5ecef5"/>
+            </svg>
+          </div>
+          
+          <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span>
+          <span class="art-label label-one">01 / APPY</span><span class="art-label label-two">EXPLORA ↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPUESTA 2: CLAUDE (CARTOON SAAS CON ESTRELLA) - GANADORA -->
+    <div class="card-propuesta ganadora">
+      <span class="badge-ganadora">🏆 Propuesta Elegida</span>
+      <div class="propuesta-header">
+        <span class="propuesta-num" style="background: #fef3c7; color: #b45309;">Opción 2</span>
+        <span class="propuesta-autor">Claude · Cartoon Tech & Estrella</span>
+      </div>
+      <h3 class="propuesta-title">«Sparky» el Héroe de las Apps (Ganador)</h3>
+      <p class="propuesta-desc">Diseño moderno estilo Figma/Stripe: smartphone con gradiente en pantalla, bracitos dinámicos alzando una gran estrella dorada brillante, zapatitos en la base e insignia ¡GRATIS!.</p>
+      <div class="preview-box">
+        <div class="hero-art" style="width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; position: relative;">
+          <div class="art-grid"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+
+          <!-- SVG PROPUESTA 2 -->
+          <div style="position: relative; z-index: 10; animation: mascot-float 3.5s ease-in-out infinite;">
+            <svg width="200" height="230" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="222" rx="45" ry="6" fill="rgba(0,95,169,0.18)"/>
+
+              <!-- Zapatitos / pies de apoyo -->
+              <ellipse cx="82" cy="192" rx="10" ry="6" fill="#005fa9"/>
+              <ellipse cx="118" cy="192" rx="10" ry="6" fill="#005fa9"/>
+
+              <!-- Brazo izquierdo saludando -->
+              <g style="transform-origin: 52px 105px; animation: mascot-wave-left 2s ease-in-out infinite;">
+                <path d="M52 105 C30 95 24 75 35 52" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <circle cx="36" cy="50" r="8" fill="#ffffff" stroke="#005fa9" stroke-width="3"/>
+              </g>
+
+              <!-- Brazo derecho levantando estrella -->
+              <g style="transform-origin: 148px 105px; animation: mascot-wave-right 2s ease-in-out infinite;">
+                <path d="M148 105 C168 95 174 75 165 48" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <circle cx="164" cy="46" r="8" fill="#ffffff" stroke="#005fa9" stroke-width="3"/>
+                <!-- Estrella brillante -->
+                <path d="M164 22 L168 34 L180 35 L170 43 L174 55 L164 47 L154 55 L158 43 L148 35 L160 34 Z" fill="#ffc700" stroke="#f59e0b" stroke-width="1.5" style="transform-origin: 164px 38px; animation: mascot-sparkle 2.5s infinite;"/>
+              </g>
+
+              <!-- Cuerpo Smartphone -->
+              <rect x="54" y="32" width="92" height="158" rx="22" fill="#005fa9" stroke="#5ecef5" stroke-width="3.5"/>
+              <rect x="85" y="40" width="30" height="4" rx="2" fill="#ffffff" opacity="0.8"/>
+
+              <!-- Pantalla con degradado -->
+              <defs>
+                <linearGradient id="p2-screen" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="100%" stop-color="#e3f5fd"/>
+                </linearGradient>
+              </defs>
+              <rect x="61" y="50" width="78" height="122" rx="14" fill="url(#p2-screen)"/>
+
+              <!-- Cara alegre -->
+              <circle cx="85" cy="88" r="6" fill="#005fa9"/>
+              <circle cx="87" cy="85" r="2" fill="#ffffff"/>
+              <circle cx="115" cy="88" r="6" fill="#005fa9"/>
+              <circle cx="117" cy="85" r="2" fill="#ffffff"/>
+              <path d="M92 102 C95 110 105 110 108 102" stroke="#005fa9" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+              <!-- Insignia en pantalla -->
+              <rect x="70" y="128" width="60" height="24" rx="12" fill="#005fa9"/>
+              <text x="100" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">¡GRATIS!</text>
+            </svg>
+          </div>
+
+          <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span>
+          <span class="art-label label-one">02 / SPARKY</span><span class="art-label label-two">APPS ↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPUESTA 3: CODEX (ROBOT TECH CON ANTENA Y RADAR) -->
+    <div class="card-propuesta">
+      <div class="propuesta-header">
+        <span class="propuesta-num">Opción 3</span>
+        <span class="propuesta-autor">Codex · Robot Tech & Antena</span>
+      </div>
+      <h3 class="propuesta-title">«RoboPhone» el Asistente Digital</h3>
+      <p class="propuesta-desc">Estilo tecnología limpia: teléfono androide con antena emisora en la cabeza, visor digital con carita led luminosa, bracitos articulados con guantes y look hiper-tecnológico.</p>
+      <div class="preview-box">
+        <div class="hero-art" style="width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; position: relative;">
+          <div class="art-grid"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+
+          <!-- SVG PROPUESTA 3 -->
+          <div style="position: relative; z-index: 10; animation: mascot-float 3.2s ease-in-out infinite;">
+            <svg width="190" height="235" viewBox="0 0 190 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="95" cy="225" rx="40" ry="6" fill="rgba(0,95,169,0.18)"/>
+
+              <line x1="95" y1="28" x2="95" y2="12" stroke="#005fa9" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="95" cy="10" r="6" fill="#5ecef5" stroke="#005fa9" stroke-width="2.5"/>
+
+              <g style="transform-origin: 48px 105px; animation: mascot-wave-left 1.8s ease-in-out infinite;">
+                <path d="M48 105 Q22 88 28 55" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <circle cx="28" cy="52" r="8" fill="#5ecef5" stroke="#005fa9" stroke-width="2"/>
+                <path d="M22 50 L20 44 M26 46 L26 40 M32 48 L34 42" stroke="#005fa9" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+
+              <path d="M142 105 Q164 115 158 135" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <circle cx="157" cy="136" r="8" fill="#5ecef5" stroke="#005fa9" stroke-width="2"/>
+
+              <rect x="50" y="28" width="90" height="160" rx="22" fill="#005fa9" stroke="#5ecef5" stroke-width="3"/>
+              
+              <rect x="56" y="44" width="78" height="126" rx="15" fill="#132333"/>
+
+              <rect x="73" y="78" width="12" height="16" rx="4" fill="#5ecef5"/>
+              <rect x="105" y="78" width="12" height="16" rx="4" fill="#5ecef5"/>
+              <path d="M84 105 Q95 114 106 105" stroke="#5ecef5" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+              <rect x="68" y="132" width="14" height="14" rx="4" fill="#005fa9"/>
+              <rect x="88" y="132" width="14" height="14" rx="4" fill="#5ecef5"/>
+              <rect x="108" y="132" width="14" height="14" rx="4" fill="#3b82f6"/>
+            </svg>
+          </div>
+
+          <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span>
+          <span class="art-label label-one">03 / ROBOPHONE</span><span class="art-label label-two">TECH ↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPUESTA 4: PI (MINIMALISTA MODERNO & VIBRANTE) -->
+    <div class="card-propuesta">
+      <div class="propuesta-header">
+        <span class="propuesta-num">Opción 4</span>
+        <span class="propuesta-autor">Pi · Flat Clean & Globos</span>
+      </div>
+      <h3 class="propuesta-title">«Clicki» el Móvil con Ideas</h3>
+      <p class="propuesta-desc">Diseño hiper-limpio y geométrico: smartphone estilizado con bordes sutiles, carita de trazo fino, brazos elegantes y dos globos de apps gratis flotando en la mano.</p>
+      <div class="preview-box">
+        <div class="hero-art" style="width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; position: relative;">
+          <div class="art-grid"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+
+          <!-- SVG PROPUESTA 4 -->
+          <div style="position: relative; z-index: 10; animation: mascot-float 2.8s ease-in-out infinite;">
+            <svg width="200" height="235" viewBox="0 0 200 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="222" rx="42" ry="6" fill="rgba(0,95,169,0.18)"/>
+
+              <g style="transform-origin: 52px 105px;">
+                <path d="M52 105 C35 100 28 85 30 68" stroke="#005fa9" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <circle cx="30" cy="66" r="7" fill="#5ecef5"/>
+                <path d="M30 66 Q20 40 25 15" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+                <circle cx="25" cy="15" r="14" fill="#005fa9"/>
+                <text x="25" y="19" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">APP</text>
+              </g>
+
+              <g style="transform-origin: 148px 105px; animation: mascot-wave-right 1.8s ease-in-out infinite;">
+                <path d="M148 105 C170 95 178 72 168 48" stroke="#005fa9" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <circle cx="166" cy="46" r="7" fill="#5ecef5"/>
+              </g>
+
+              <rect x="54" y="34" width="92" height="154" rx="20" fill="#005fa9" stroke="#ffffff" stroke-width="2.5"/>
+              <rect x="85" y="42" width="30" height="4" rx="2" fill="#5ecef5"/>
+
+              <rect x="60" y="52" width="80" height="118" rx="14" fill="#ffffff"/>
+
+              <circle cx="84" cy="90" r="5" fill="#005fa9"/>
+              <path d="M110 90 Q116 84 122 90" stroke="#005fa9" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <path d="M92 106 Q103 118 114 106" stroke="#005fa9" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+              <rect x="72" y="132" width="56" height="22" rx="11" fill="#e0f4ff"/>
+              <text x="100" y="146" font-size="9.5" font-weight="850" fill="#005fa9" text-anchor="middle">100% LIBRE</text>
+            </svg>
+          </div>
+
+          <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span>
+          <span class="art-label label-one">04 / CLICKI</span><span class="art-label label-two">LIBRE ↗</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setPreviewTheme(theme) {
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.hero-art').forEach(el => {
+        if (theme === 'dark') {
+          el.setAttribute('data-theme', 'dark');
+          el.style.background = 'radial-gradient(circle at 54% 49%, #244d65 0, #1e3b4e 40%, #1b2935 76%)';
+          el.style.borderColor = '#354856';
+        } else {
+          el.removeAttribute('data-theme');
+          el.style.background = 'radial-gradient(circle at 54% 49%, #d9f3fc 0, #e9f8fe 38%, #f4fbfe 72%)';
+          el.style.borderColor = '#d4eaf5';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
