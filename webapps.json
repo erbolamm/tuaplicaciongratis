@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fabrica-agentes",
+    "title": "Fábrica de Agentes",
+    "description": "Explora, personaliza y copia prompts y flujos de trabajo para crear tus propios agentes de IA.",
+    "category": "Inteligencia artificial",
+    "tags": ["HTML", "JavaScript", "Prompts"],
+    "liveUrl": "https://erbolamm.github.io/FabricaDeAgentesApliarte/",
+    "repoUrl": "https://github.com/erbolamm/FabricaDeAgentesApliarte"
+  },
+  {
+    "id": "widget-canvas",
+    "title": "ApliArte Widget Canvas",
+    "description": "Diseña y anota interfaces Flutter sobre un lienzo visual; convierte tus cambios en prompts de implementación.",
+    "category": "Diseño y desarrollo",
+    "tags": ["Flutter", "Dart", "Diseño UI"],
+    "liveUrl": "https://erbolamm.github.io/apliarte-widget-canvas/",
+    "repoUrl": "https://github.com/erbolamm/apliarte-widget-canvas"
+  },
+  {
+    "id": "apliarte-faq",
+    "title": "ApliArte FAQ",
+    "description": "Prueba un asistente de preguntas frecuentes que busca respuestas sin conexión ni servicios de IA.",
+    "category": "Productividad",
+    "tags": ["Flutter", "Dart", "Offline"],
+    "liveUrl": "https://erbolamm.github.io/apliarte_faq/",
+    "repoUrl": "https://github.com/erbolamm/apliarte_faq"
+  },
+  {
+    "id": "glass-theme",
+    "title": "ApliArte Glass Theme",
+    "description": "Demo interactiva de componentes y efectos de cristal para interfaces creadas con Flutter.",
+    "category": "Diseño y desarrollo",
+    "tags": ["Flutter", "Dart", "UI"],
+    "liveUrl": "https://erbolamm.github.io/apliarte-glass-theme/",
+    "repoUrl": "https://github.com/erbolamm/apliarte-glass-theme"
+  },
+  {
+    "id": "megapromtista",
+    "title": "MegaPromtista",
+    "description": "Mapa interactivo de proyectos, prompts y agentes para explorar el ecosistema abierto de ApliArte.",
+    "category": "Inteligencia artificial",
+    "tags": ["HTML", "JavaScript", "Canvas"],
+    "liveUrl": "https://megapromtista.com/",
+    "repoUrl": "https://github.com/erbolamm/megapromtista"
+  }
+]

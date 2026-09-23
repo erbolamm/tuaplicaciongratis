@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7fafc">
+    <meta name="description" content="Aplicaciones web y herramientas gratuitas de Javier Mateo (ApliArte / ErBolamm). Descubre proyectos abiertos y pruébalos en tu navegador.">
+    <title>Aplicaciones gratis · ApliArte</title>
+    <link rel="preload" href="app.css" as="style">
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="ApliArte · Inicio">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>Apli<span class="brand-accent">Arte</span><small>APPS GRATIS</small></span>
+        </a>
+        <nav class="header-actions" aria-label="Navegación principal">
+          <a class="blog-link" href="https://blog.tuaplicaciongratis.com" target="_blank" rel="noopener noreferrer">Explorar el blog <span aria-hidden="true">↗</span></a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false" title="Cambiar tema">
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.4 15.6A8.5 8.5 0 0 1 8.4 3.6a8.5 8.5 0 1 0 12 12Z"/></svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="catalogo">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> UN ESPACIO PARA CREAR Y DESCUBRIR</p>
+          <h1 id="hero-title">Herramientas que<br><span>merecen ser usadas.</span></h1>
+          <p class="hero-description">Aplicaciones web, demos y recursos gratuitos creados por Javier Mateo. Proyectos abiertos, ideas útiles y acceso directo, sin rodeos.</p>
+          <a class="hero-action" href="#explorar">Explorar proyectos <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-grid"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-center"><span class="art-spark">✳</span><span>hecho para<br>explorar</span></div>
+          <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span><span class="art-dot dot-three"></span>
+          <span class="art-label label-one">01 / DESCUBRE</span><span class="art-label label-two">IDEAS EN ABIERTO ↗</span>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="explorar" aria-labelledby="catalog-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div><p class="section-kicker">EL CATÁLOGO</p><h2 id="catalog-title">Encuentra tu próxima herramienta<span>.</span></h2></div>
+            <p class="section-aside">Una selección de proyectos públicos que puedes abrir ahora mismo.</p>
+          </div>
+          <div class="controls" role="search" aria-label="Buscar proyectos">
+            <label class="search-box" for="search-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search-input" type="search" placeholder="Buscar por nombre, función o tecnología…" autocomplete="off"><span class="search-shortcut" aria-hidden="true">/</span></label>
+            <label class="category-wrap" for="category-filter"><span class="sr-only">Filtrar por categoría</span><select id="category-filter"><option value="all">Todas las categorías</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>
+          </div>
+          <div class="results-bar"><p id="results-count" role="status" aria-live="polite">Cargando proyectos…</p><span class="results-decoration" aria-hidden="true">EXPLORA · PRUEBA · CREA</span></div>
+          <div class="card-grid" id="card-grid" aria-live="off"></div>
+          <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No encontramos coincidencias</h3><p>Prueba con otro término o cambia la categoría.</p><button id="reset-filters" type="button">Ver todos los proyectos <span aria-hidden="true">↗</span></button></div>
+          <p class="catalog-note">Selección verificada de proyectos públicos de <a href="https://github.com/erbolamm" target="_blank" rel="noopener noreferrer">ErBolamm en GitHub ↗</a>. Algunos son demos de paquetes o requieren una plataforma específica para usar todas sus funciones.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="shell footer-inner"><div><span class="footer-brand">Apli<span>Arte</span></span><p>Ideas abiertas. Herramientas para todos.</p></div><div class="footer-links"><a href="https://blog.tuaplicaciongratis.com" target="_blank" rel="noopener noreferrer">Blog ↗</a><a href="https://github.com/erbolamm" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><span class="footer-credit">Hecho con intención por Javier Mateo.</span></div></footer>
+  </body>
+</html>
