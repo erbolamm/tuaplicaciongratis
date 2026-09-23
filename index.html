@@ -311,36 +311,53 @@
           <div class="art-orbit orbit-one"></div>
           <div class="art-orbit orbit-two"></div>
           <div class="art-mascot">
-            <svg class="mascot" viewBox="0 0 200 240" focusable="false">
-              <ellipse class="mascot-shadow" cx="100" cy="226" rx="46" ry="7"/>
-              <g class="mascot-phone">
-                <g class="mascot-arm-wave">
-                  <path class="mascot-arm" d="M58 112 C40 106 30 92 27 70"/>
-                  <circle class="mascot-hand" cx="26" cy="62" r="10"/>
-                  <path class="mascot-finger" d="M20 55 l-3 -8 M26 52 v-9 M32 55 l3 -8"/>
+            <div class="mascot-float-wrap">
+              <svg class="mascot" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-label="Mascota oficial Sparky de TuAplicacionGratis.com">
+                <ellipse class="mascot-shadow" cx="100" cy="222" rx="45" ry="6" fill="rgba(0,95,169,0.18)"/>
+
+                <!-- Zapatitos / pies de apoyo -->
+                <ellipse cx="82" cy="192" rx="10" ry="6" fill="#005fa9"/>
+                <ellipse cx="118" cy="192" rx="10" ry="6" fill="#005fa9"/>
+
+                <!-- Brazo izquierdo saludando -->
+                <g class="mascot-wave-left">
+                  <path d="M52 105 C30 95 24 75 35 52" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                  <circle cx="36" cy="50" r="8" fill="#ffffff" stroke="#005fa9" stroke-width="3"/>
                 </g>
-                <g class="mascot-arm-hold">
-                  <path class="mascot-arm" d="M142 122 C158 120 168 110 172 96"/>
-                  <circle class="mascot-hand" cx="173" cy="90" r="10"/>
-                  <path class="mascot-star" d="M174 56 l5 11 12 2 -9 8 2 12 -10 -6 -10 6 2 -12 -9 -8 12 -2 z"/>
+
+                <!-- Brazo derecho levantando estrella -->
+                <g class="mascot-wave-right">
+                  <path d="M148 105 C168 95 174 75 165 48" stroke="#005fa9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                  <circle cx="164" cy="46" r="8" fill="#ffffff" stroke="#005fa9" stroke-width="3"/>
+                  <!-- Estrella brillante -->
+                  <path class="mascot-sparkle" d="M164 22 L168 34 L180 35 L170 43 L174 55 L164 47 L154 55 L158 43 L148 35 L160 34 Z" fill="#ffc700" stroke="#f59e0b" stroke-width="1.5"/>
                 </g>
-                <rect class="mascot-body" x="55" y="26" width="90" height="164" rx="22"/>
-                <rect class="mascot-screen" x="63" y="44" width="74" height="130" rx="13"/>
-                <rect class="mascot-speaker" x="88" y="33" width="24" height="4" rx="2"/>
-                <circle class="mascot-camera" cx="120" cy="35" r="3"/>
-                <g class="mascot-eyes">
-                  <ellipse class="mascot-eye" cx="86" cy="96" rx="8" ry="11"/>
-                  <ellipse class="mascot-eye" cx="114" cy="96" rx="8" ry="11"/>
-                  <circle class="mascot-shine" cx="89" cy="91" r="3"/>
-                  <circle class="mascot-shine" cx="117" cy="91" r="3"/>
-                </g>
-                <ellipse class="mascot-cheek" cx="76" cy="114" rx="6" ry="3.5"/>
-                <ellipse class="mascot-cheek" cx="124" cy="114" rx="6" ry="3.5"/>
-                <path class="mascot-smile" d="M88 118 Q100 132 112 118"/>
-                <rect class="mascot-badge" x="52" y="178" width="96" height="24" rx="12"/>
-                <text class="mascot-badge-text" x="100" y="194" text-anchor="middle" textLength="80" lengthAdjust="spacingAndGlyphs">100% GRATIS</text>
-              </g>
-            </svg>
+
+                <!-- Cuerpo Smartphone -->
+                <rect x="54" y="32" width="92" height="158" rx="22" fill="#005fa9" stroke="#5ecef5" stroke-width="3.5"/>
+                <rect x="85" y="40" width="30" height="4" rx="2" fill="#ffffff" opacity="0.8"/>
+
+                <!-- Pantalla con degradado -->
+                <defs>
+                  <linearGradient id="p2-screen" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="100%" stop-color="#e3f5fd"/>
+                  </linearGradient>
+                </defs>
+                <rect x="61" y="50" width="78" height="122" rx="14" fill="url(#p2-screen)"/>
+
+                <!-- Cara alegre -->
+                <circle cx="85" cy="88" r="6" fill="#005fa9"/>
+                <circle cx="87" cy="85" r="2" fill="#ffffff"/>
+                <circle cx="115" cy="88" r="6" fill="#005fa9"/>
+                <circle cx="117" cy="85" r="2" fill="#ffffff"/>
+                <path d="M92 102 C95 110 105 110 108 102" stroke="#005fa9" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+                <!-- Insignia en pantalla -->
+                <rect x="70" y="128" width="60" height="24" rx="12" fill="#005fa9"/>
+                <text x="100" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">¡GRATIS!</text>
+              </svg>
+            </div>
           </div>
           <span class="art-dot dot-one"></span><span class="art-dot dot-two"></span><span class="art-dot dot-three"></span>
           <span class="art-label label-one">01 / DESCUBRE</span><span class="art-label label-two">IDEAS EN ABIERTO ↗</span>
